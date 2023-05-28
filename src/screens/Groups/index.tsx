@@ -5,6 +5,10 @@ export function Groups() {
     return (
         <View style={styles.container}>
             <Input/>
+            <Input/>
+            <Input/>
+            <Input/>
+            <Input/>
         </View>
     );
 }
@@ -12,10 +16,9 @@ export function Groups() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#525756',
+    backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
-    fontFamily:'roboto'
   },
 });
 

@@ -46,7 +46,7 @@ export default function App() {
     return (
         <Provider>
             <ThemeProvider theme={theme}>
-            <Groups/>
+                <Groups/>
             </ThemeProvider>
         </Provider>
     );
