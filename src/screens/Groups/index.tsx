@@ -1,3 +1,4 @@
+import { Header } from '@components/Header';
 import { Input } from '@components/TextInput';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -9,6 +10,7 @@ export function Groups() {
             <Input/>
             <Input/>
             <Input/>
+            <Header/>
         </View>
     );
 }
@@ -16,7 +18,7 @@ export function Groups() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000000',
+    backgroundColor: '#202024',
     alignItems: 'center',
     justifyContent: 'center',
   },
