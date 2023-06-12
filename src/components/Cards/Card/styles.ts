@@ -8,6 +8,9 @@ import { TouchableOpacity } from "react-native";
 export const CardComponent = styled(TouchableOpacity)`
     padding: ${RFValue(8)}px;
     width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: ${RFValue(8)}px;
     height:  ${RFValue(90)}px;
     padding: ${RFValue(16)}px;
     border-radius: ${RFValue(10)}px;

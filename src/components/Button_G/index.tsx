@@ -3,7 +3,7 @@ import { TouchableOpacityProps } from "react-native";
 import { Container, TextButton } from "./styles";
 
 interface IProps extends TouchableOpacityProps  {
-    colorButton: string;
+    colorButton?: string;
 }
 
 export function Button_G({colorButton, ...rest}:IProps) {

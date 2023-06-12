@@ -8,6 +8,7 @@ export const Container = styled.View`
     justify-content: center;
     padding-left: ${RFValue(16)}px;
     padding-right: ${RFValue(16)}px;
+    padding-top: ${RFValue(16)}px;;
 `;
 
 export const TextBold = styled.Text`

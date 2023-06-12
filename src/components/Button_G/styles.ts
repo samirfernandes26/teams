@@ -3,7 +3,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 import styled, { css } from "styled-components/native";
 
 interface IProps {
-    colorButton: string;
+    colorButton?: string;
 }
 
 export const Container = styled(TouchableOpacity)<IProps>`
