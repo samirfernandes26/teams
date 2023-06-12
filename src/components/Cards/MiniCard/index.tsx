@@ -1,10 +1,15 @@
 import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { ButtonCard, CardComponent, Icone, SubContainer, TextCard } from './styles';
 import { useTheme } from 'styled-components';
 
 
-export function MiniCarde(){
+interface Iprops extends TouchableOpacityProps {
+    textButton: string;
+}
+
+export function MiniCarde({textButton, ...rest}:Iprops){
     const theme = useTheme();
     
     
@@ -19,10 +24,10 @@ export function MiniCarde(){
                 />
 
                 <TextCard>
-                    testando aqui a fonte
+                    {textButton}
                 </TextCard>
             </SubContainer>
-            <ButtonCard>
+            <ButtonCard {...rest}>
                 <Icone 
                     name='close'
                     color={theme.colors.red_dark}

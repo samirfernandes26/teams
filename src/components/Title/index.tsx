@@ -1,18 +1,21 @@
 import React from 'react';
-import { RFValue } from 'react-native-responsive-fontsize';
 import { Container, TextBold, Textregular } from './styles';
 
-import logo from '@assets/logo.png'
+interface IProps {
+    titleBold: string;
+    titleRegular: string;
+}
 
-export function Title(){
+
+export function Title({titleBold,titleRegular}:IProps){
 
     return (
         <Container>
            <TextBold>
-                Nova Turma
+                {titleBold}
            </TextBold>
            <Textregular>
-                cire uma turma para adicionar pessoas!
+                {titleRegular}
            </Textregular>
         </Container>
     )

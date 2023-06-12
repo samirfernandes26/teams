@@ -1,15 +1,19 @@
 import React from 'react';
+import { TouchableOpacityProps } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { CardComponent, Icone, TextCard } from './styles';
 import { useTheme } from 'styled-components';
 
+interface IProps extends TouchableOpacityProps {
+    textButton: string;
+}
 
-export function Carde(){
+export function Carde({textButton, ...rest}:IProps){
     const theme = useTheme();
     
     
     return (
-       <CardComponent>
+       <CardComponent {...rest} >
             <Icone 
                 name='people'
                 color={theme.colors.greem_700}
@@ -18,7 +22,7 @@ export function Carde(){
             />
 
             <TextCard>
-                testando aqui a fonte
+                {textButton}
             </TextCard>
        
        </CardComponent>
