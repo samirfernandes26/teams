@@ -1,3 +1,4 @@
+import { TouchableOpacity } from "react-native";
 import { RFValue } from "react-native-responsive-fontsize";
 import styled, { css } from "styled-components/native";
 
@@ -5,7 +6,7 @@ interface IProps {
     colorButton: string;
 }
 
-export const Container = styled.TouchableOpacity<IProps>`
+export const Container = styled(TouchableOpacity)<IProps>`
     width: 90%;
     height: ${RFValue(56)}px;
     align-items: center;

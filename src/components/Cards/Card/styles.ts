@@ -2,9 +2,10 @@ import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Card } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
 
-export const CardComponent = styled.TouchableOpacity`
+export const CardComponent = styled(TouchableOpacity)`
     padding: ${RFValue(8)}px;
     width: 90%;
     height:  ${RFValue(90)}px;

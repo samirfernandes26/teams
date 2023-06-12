@@ -2,6 +2,7 @@ import styled from "styled-components/native";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Card } from "react-native-paper";
 import { MaterialIcons } from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native";
 
 
 export const CardComponent = styled.View`
@@ -34,7 +35,7 @@ export const TextCard = styled.Text`
 
 `;
 
-export const ButtonCard = styled.TouchableOpacity`
+export const ButtonCard = styled(TouchableOpacity)`
 
 `;
 
