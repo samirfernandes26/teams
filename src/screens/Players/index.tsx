@@ -4,15 +4,11 @@ import { RFValue } from 'react-native-responsive-fontsize';
 
 import { Container, ScrollHorizontalContainer, SubContainer, TextContador, ViewContador } from './styles';
 
-import { Button_G } from '@components/Button_G';
 import { Button_P } from '@components/Button_P';
-import { Carde } from '@components/Cards/Card';
 import { MiniCarde } from '@components/Cards/MiniCard';
 import { Header } from '@components/Header';
 import { Input } from '@components/TextInput';
 import { Title } from '@components/Title';
-import { IconeHeader } from '@components/Header/styles';
-import { ListEmpty } from '@components/ListEmpty';
 import { PaperImput } from '@components/TextInput/styles';
 import { useTheme } from 'styled-components/native';
 
@@ -22,7 +18,6 @@ export function Players() {
     const [timeSelecionado, setTimeSelecionado] = useState<number>(-1);
 
     const handleTimeSelecionado = (index:number) => {
-        console.log(index);
         if(timeSelecionado === index){
             setTimeSelecionado(-1);
         }else{
