@@ -15,6 +15,7 @@ import {
 import { useCallback, useEffect, useState } from 'react';
 import { StatusBar, View } from 'react-native';
 import { NewGroup } from '@screens/NewGroup';
+import { Players } from '@screens/Players';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -58,7 +59,7 @@ export default function App() {
                         networkActivityIndicatorVisible
                         hidden={false}
                     />
-                    {fontsLoaded ? <NewGroup/> : <Loading/>}  
+                    {fontsLoaded ? <Players/> : <Loading/>}  
                 </ThemeProvider>
             </Provider>
         </View>
