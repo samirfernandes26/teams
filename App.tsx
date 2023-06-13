@@ -14,6 +14,7 @@ import {
 } from '@expo-google-fonts/roboto';
 import { useCallback, useEffect, useState } from 'react';
 import { StatusBar, View } from 'react-native';
+import { NewGroup } from '@screens/NewGroup';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -57,7 +58,7 @@ export default function App() {
                         networkActivityIndicatorVisible
                         hidden={false}
                     />
-                    {fontsLoaded ? <Groups/> : <Loading/>}  
+                    {fontsLoaded ? <NewGroup/> : <Loading/>}  
                 </ThemeProvider>
             </Provider>
         </View>

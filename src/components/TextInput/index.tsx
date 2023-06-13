@@ -13,14 +13,14 @@ export function Input({...rest}) {
     return (
         <PaperImput
             {...rest}
-            placeholder='Adicione uma nova tarefa'
             placeholderTextColor={theme.colors.gray_300}
             style = {{
                 backgroundColor: theme.colors.gray_500,
                 height:RFValue(52),
                 color:theme.colors.gray_100,
                 justifyContent: 'center',
-                width:'80%'
+                width:'90%',
+                margin:RFValue(16),               
             }}
             outlineColor={theme.colors.gray_600}
             activeOutlineColor={theme.colors.greem_700}

@@ -4,13 +4,14 @@ import { Container, TextButton } from "./styles";
 
 interface IProps extends TouchableOpacityProps  {
     colorButton?: string;
+    nomeButton?: string;
 }
 
-export function Button_G({colorButton, ...rest}:IProps) {
+export function Button_G({colorButton, nomeButton='Criar nova Turma', ...rest}:IProps) {
     return( 
         <Container colorButton={colorButton} {...rest}>
             <TextButton>
-                criar nova turma
+                {nomeButton}
             </TextButton>
         </Container>
     )

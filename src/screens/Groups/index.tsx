@@ -13,6 +13,7 @@ import { Header } from '@components/Header';
 import { Input } from '@components/TextInput';
 import { Title } from '@components/Title';
 import { IconeHeader } from '@components/Header/styles';
+import { ListEmpty } from '@components/ListEmpty';
 
 export function Groups() {
     const [groups, setGroups] = useState<string[]>(['galera do teste', 'fut'])
@@ -37,10 +38,14 @@ export function Groups() {
                     <Carde
                         textButton={item}
                     />
-
+                )}
+                contentContainerStyle={groups.length === 0 && {flex:1}}
+                ListEmptyComponent={() => (
+                    <ListEmpty
+                        mensagem='Que tal cadastrar uma nova turma!!'
+                    />
                 )}
                 style={{
-                    flex:1,
                     width:'100%'
                 }}
                 
