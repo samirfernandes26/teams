@@ -24,32 +24,18 @@ export function Groups() {
             <SubContainer>
                 <Logo source={logo}/>
 
-                <Title
-                    titleBold='Turma'
-                    titleRegular='jogue com a sua turma'
-                />
+                <Title titleBold='Turma' titleRegular='jogue com a sua turma' />
             </SubContainer>
 
 
             <FlatList
                 data={groups}
                 keyExtractor={item => item}
-                renderItem={({item}) =>(
-                    <Carde
-                        textButton={item}
-                    />
-                )}
+                renderItem={({item}) =>(<Carde textButton={item}/>)}
                 contentContainerStyle={groups.length === 0 && {flex:1}}
-                ListEmptyComponent={() => (
-                    <ListEmpty
-                        mensagem='Que tal cadastrar uma nova turma!!'
-                    />
-                )}
-                style={{
-                    width:'100%'
-                }}
-                
-            
+                ListEmptyComponent={() => (<ListEmpty mensagem='Que tal cadastrar uma nova turma!!'/>)}
+                style={{width:'100%'}}
+                showsVerticalScrollIndicator={false}
             />
 
             <Button_G />

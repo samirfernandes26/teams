@@ -15,18 +15,19 @@ export function MiniCarde({textButton, ...rest}:Iprops){
     
     return (
         <CardComponent>
+
             <SubContainer>
                 <Icone 
                     name='emoji-people'
                     color={theme.colors.gray_100}
                     size={RFValue(24)}
-
                 />
 
                 <TextCard>
                     {textButton}
                 </TextCard>
             </SubContainer>
+
             <ButtonCard {...rest}>
                 <Icone 
                     name='close'
@@ -35,6 +36,7 @@ export function MiniCarde({textButton, ...rest}:Iprops){
 
                 />
             </ButtonCard>
+            
         </CardComponent>
     )
     

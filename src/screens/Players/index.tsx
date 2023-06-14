@@ -11,10 +11,13 @@ import { Input } from '@components/TextInput';
 import { Title } from '@components/Title';
 import { PaperImput } from '@components/TextInput/styles';
 import { useTheme } from 'styled-components/native';
+import { ListEmpty } from '@components/ListEmpty';
+import { Button_G } from '@components/Button_G';
 
 export function Players() {
     const theme = useTheme();
     const [times, setTimes] = useState<string[]>(['Time 1', 'Time 2', 'Time 3', 'Time 4', 'Time 5']);
+    const [players, setPlayers] = useState(['samir', 'joao', 'amanda', 'bruna'])
     const [timeSelecionado, setTimeSelecionado] = useState<number>(-1);
 
     const handleTimeSelecionado = (index:number) => {
@@ -62,41 +65,30 @@ export function Players() {
 
                 <ViewContador>
                     <TextContador>
-                        6
+                        {players.length || 0}
                     </TextContador>
                 </ViewContador>
 
             </ScrollHorizontalContainer>
 
-            <MiniCarde
-                textButton='Samir Fernandes de Lima Resende'
+            
+
+
+
+            <FlatList
+                data={players}
+                keyExtractor={item => item}
+                renderItem={({item}) =>( <MiniCarde textButton={item}/> )}
+                ListEmptyComponent={() => ( <ListEmpty mensagem='Nenhuma player cadastrado!!'/> )}
+                style={{ width:'100%'}}
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={players.length === 0 && {paddingBottom: RFValue(100)}}           
             />
 
-
-
-            {/* <FlatList
-                data={groups}
-                keyExtractor={item => item}
-                renderItem={({item}) =>(
-                    <Button_P
-                        nomeButton={item}
-                    />
-                )}
-                horizontal={true}
-                ListEmptyComponent={() => (
-                    <ListEmpty
-                        mensagem='Nenhuma Turma cadastrada!!'
-                    />
-                )}
-                style={{
-                    width:'100%',
-                    backgroundColor: '#000'
-                }}
-                
-            
-            /> */}
-
-            {/* <Button_G /> */}
+            <Button_G
+                nomeButton='Remover turma'
+                colorButton={theme.colors.red_dark}
+            />
             {/* <Input/>
             <Header/>
             <Button_P/>
